@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+     {% block title %}
+        Django app
+     {% endblock %}   
+    </title>
+    <script src={% static 'main.js' %}></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <span role='img' aria-label='Home'>🏠</span>
+
+        </a>
+        <a href="{% url 'demo_app:demo_page' %}">
+            <span role='img' aria-label='Demo-app'>🦐</span>
+        </a>
+    </nav>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+
+    </main>
+</body>
+</html>
