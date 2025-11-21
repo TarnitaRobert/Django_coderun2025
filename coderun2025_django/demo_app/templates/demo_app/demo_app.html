@@ -5,5 +5,17 @@
 {% endblock %}
 
 {% block content %}
- <h1> Hello from demo app</h1>
+    <h1> Hello from demo app</h1>
+
+    {% for user in users  %}
+        <article class = 'user'>
+            <p>{{ user.name }}</p>
+            <p>{{ user.surname }}</p>
+            <p>{{ user.age }}</p>
+            <p>{{ user.mail }}</p>
+            <p>{{ user.job }}</p>
+
+        <aticle>
+    {% endfor %}
+    
 {% endblock%}
