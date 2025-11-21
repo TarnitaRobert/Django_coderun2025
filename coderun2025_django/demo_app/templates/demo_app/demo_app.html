@@ -7,26 +7,30 @@
 {% block content %}
     <h1> User submission form </h1>
 
-    <div>
-        <form method = "post">
-            {% csrf_token %}
-            {{ user_form.as_p }}
-            <button type ='' class='submit-btn'>Send</button>
-        </form>
+    <div class="demo-page">
+        <div class="user-column">
+            <div class="user-list-container"> 
+            {% for user in users  %}
+                <hr>
+                <article class = "user">
+                    <p>{{ user.name }}</p>
+                    <p>{{ user.surname }}</p>
+                    <p>{{ user.age }}</p>
+                    <p>{{ user.mail }}</p>
+                    <p>{{ user.job }}</p>
+                </article>
+            {% endfor %}
+            </div>
+        </div>
 
-    </div>
-
-    <div>
-    {% for user in users  %}
-        <hr>
-        <article class = 'user'>
-            <p>{{ user.name }}</p>
-            <p>{{ user.surname }}</p>
-            <p>{{ user.age }}</p>
-            <p>{{ user.mail }}</p>
-            <p>{{ user.job }}</p>
-
-        <aticle>
-    {% endfor %}
+        <aside class="form-column">
+            <div class="demo-app-container">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ user_form.as_p }}
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </aside>
     </div>
 {% endblock%}
