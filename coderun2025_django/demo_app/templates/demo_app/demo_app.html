@@ -5,9 +5,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1> Hello from demo app</h1>
+    <h1> User submission form </h1>
 
+    <div>
+        <form method = "post">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            <button type ='' class='submit-btn'>Send</button>
+        </form>
+
+    </div>
+
+    <div>
     {% for user in users  %}
+        <hr>
         <article class = 'user'>
             <p>{{ user.name }}</p>
             <p>{{ user.surname }}</p>
@@ -17,5 +28,5 @@
 
         <aticle>
     {% endfor %}
-    
+    </div>
 {% endblock%}

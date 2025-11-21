@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background-color: black;
+    background-color: #000000e0;
     color: whitesmoke;
     font-size: 3rem;
     display: flex;
@@ -15,7 +15,7 @@ body {
 
 nav {
     padding: 1rem;
-    background-color: #44B78B;
+    background-color: #ff7070;
     color: white;
     font-size: 2.5rem;
 }
@@ -23,11 +23,9 @@ nav {
 main {
     flex-grow: 1;
     display: grid;
-    place-content: center;
 }
 
-h1,
-p {
+h1,p {
     text-align: center;
 }
 
@@ -38,4 +36,39 @@ a {
 
 a:hover {
     opacity: .85;
+}
+
+hr {
+  border: none; 
+  height: 2px;
+  background-color: #ff7070; 
+  margin: 20px 0; 
+    
+}
+.submit-btn {
+   
+    width: 20%;
+    padding: 12px 24px; 
+    font-size: 1rem;
+    font-weight: 600; 
+    color: #ffffff;
+    border-radius: 12px; 
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-image: linear-gradient(to right, #00A69D, #4F46E5); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 12px auto;    
+}
+
+.submit-btn:hover {
+    background-image: linear-gradient(to right, #008C84, #4338CA); 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    transform: translateY(-2px); 
+}
+
+.submit-btn:focus {
+    box-shadow: 0 0 0 4px rgba(166, 0, 0, 0.5); 
 }
